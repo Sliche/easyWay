@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +26,20 @@ Route::get('/', function () {
 |
 */
 
+
 Route::group(['middleware' => ['web']], function () {
     //
 });
+
+
+
+
+Route::get('/', 'PagesController@index');
+
+Route::get('signup', 'PagesController@signup');
+
+Route::get('bar', 'PagesController@bar');
+
+Route::get('login', 'PagesController@login');
+
+
